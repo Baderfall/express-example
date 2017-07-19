@@ -7,6 +7,7 @@ var log = require('libs/log')(module);
 var app = express();
 app.set('port', config.get('port'));
 
+app.engine('ejs', require('ejs-locals'));
 app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'ejs');
 
@@ -15,10 +16,8 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 app.get('/', function(req, res, next) {
-  res.render('index', {
-    title: 'Hello, world!'
-  })
-})
+  res.render('index', {});
+});
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
