@@ -6,10 +6,11 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "async": "^2.5.0",
     "ejs": "*",
     "express": "3.21.2",
     "mongodb": "^2.2.30",
-    "mongoose": "^4.11.3",
+    "mongoose": "^4.10.8",
     "nconf": "^0.8.4",
     "winston": "^2.3.1"
   }
