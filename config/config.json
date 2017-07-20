@@ -1,3 +1,13 @@
 {
-  "port": 1337
+  "port": 1337,
+  "mongoose": {
+    "uri": "mongodb://localhost:27017/chat",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  }
 }
