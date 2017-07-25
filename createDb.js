@@ -8,7 +8,6 @@ async.series([
   requireModels,
   createUsers
 ], function(err, results) {
-  console.log(arguments);
   mongoose.disconnect();
 });
 
@@ -32,7 +31,7 @@ function requireModels(callback) {
 function createUsers(callback) {
   var users = [
     new mongoose.models.User({username: 'Вася', password: 'supervasya'}),
-    new mongoose.models.User({username: 'Вася', password: 'superpetya'}),
+    new mongoose.models.User({username: 'Петя', password: 'superpetya'}),
     new mongoose.models.User({username: 'Маша', password: 'supermasha'})
   ];
 
